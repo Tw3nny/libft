@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
+
 // 1ere boucle si dst est devant, 2eme boucle si src est devant
 // 1ere boucle on par de la fin, 2eme boucle on part du debut -> cpy classique
 void	*ft_memmove(void *dst, const void *src, size_t len)
