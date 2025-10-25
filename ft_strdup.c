@@ -1,45 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/14 18:35:09 by marvin            #+#    #+#             */
-/*   Updated: 2025/10/25 02:02:57 by matisgutier      ###   ########.fr       */
+/*   Created: 2025/10/25 00:56:44 by matisgutier       #+#    #+#             */
+/*   Updated: 2025/10/25 01:34:09 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <string.h>
 #include "libft.h"
+#include <stdlib.h>
+#include <stdio.h>
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+char	*ft_strdup(const char *s1)
 {
-	size_t	i;
-	size_t	j;
+	size_t	size;
+	char	*tab;
 
-	i = 0;
-	j = 0;
-	while (src[i] != '\0')
-	{
-		i++;
-	}
-	if (dstsize == 0)
-		return (i);
-	while (src[j] != '\0' && j < dstsize - 1)
-	{
-		dst[j] = src[j];
-		j++;
-	}
-	dst[j] = '\0';
-	return (i);
+	size = ft_strlen(s1);
+	tab = malloc(sizeof(char) * (size + 1));
+	if (!tab)
+		return (NULL);
+	ft_strlcpy(tab, s1, size + 1);
+	return (tab);
 }
 /*
 int	main(void)
 {
-	char dst[17];
-	char src[] = "ue ue sa dit quoi";
-	printf("%ld\n", ft_strlcpy(dst, src, 17));
+	char *dst = "";
+	char *s1 = "ue ue sa dit quoi"; 
+	printf("avant %s\n", dst);
+	dst = ft_strdup(s1);
+	printf("apres %s\n", dst);
+	free(dst);
 	return (0);
 }*/
