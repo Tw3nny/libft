@@ -6,13 +6,12 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 00:56:44 by matisgutier       #+#    #+#             */
-/*   Updated: 2025/10/25 01:34:09 by matisgutier      ###   ########.fr       */
+/*   Updated: 2025/10/27 02:59:39 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 char	*ft_strdup(const char *s1)
 {
