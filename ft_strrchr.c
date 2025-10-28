@@ -6,14 +6,14 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 21:39:54 by marvin            #+#    #+#             */
-/*   Updated: 2025/10/25 02:03:19 by matisgutier      ###   ########.fr       */
+/*   Updated: 2025/10/28 03:28:01 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include "libft.h"
 
-char	*ft_strtchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	char	*last;
 	size_t	i;

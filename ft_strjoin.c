@@ -1,50 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/27 03:04:47 by matisgutier       #+#    #+#             */
-/*   Updated: 2025/10/27 17:37:45 by matisgutier      ###   ########.fr       */
+/*   Created: 2025/10/27 17:50:34 by matisgutier       #+#    #+#             */
+/*   Updated: 2025/10/28 02:24:31 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include <stddef.h>
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strjoin(const char *s1, const char *s2)
 {
-	size_t	i;
-	size_t	s_len;
-	char	*substr;
+	size_t	len_s1;
+	size_t	len_s2;
+	char	*join;
 
-	i = 0;
-	s_len = ft_strlen(s);
-	if (!s)
+	if (!s1 || !s2)
 		return (NULL);
-	if (start > s_len)
-		return (ft_strdup(""));
-	if (start + len > s_len)
-		len = s_len - (int) start;
-	substr = malloc(sizeof(char) * (len + 1));
-	if (!substr)
+	len_s1 = ft_strlen(s1);
+	len_s2 = ft_strlen(s2);
+	join = malloc(sizeof(char) * (len_s1 + len_s2 + 1));
+	if (!join)
 		return (NULL);
-	while (i < len)
-	{
-		substr[i] = s[start + i];
-		i++;
-	}
-	substr[i] = '\0';
-	return (substr);
+	ft_strlcpy(join, s1, len_s1 + len_s2 + 1);
+	ft_strlcat(join, s2, len_s1 + len_s2 + 1);
+	return (join);
 }
 /*
 int	main(void)
 {
-	char	*substr = ft_substr("ue ue sa dit quoi", 5, 7);
-	printf("%s", substr);
-	free(substr);
+	char	*join = ft_strjoin("ue ue ", "sa dit quoi");
+	printf("%s", join);
+	free(join);
 	return (0);
 }*/
