@@ -6,7 +6,7 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 23:44:32 by marvin            #+#    #+#             */
-/*   Updated: 2025/10/25 02:02:18 by matisgutier      ###   ########.fr       */
+/*   Updated: 2025/11/02 03:33:43 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	tmp1 = (unsigned char *) dst;
 	tmp2 = (unsigned char *) src;
 	i = 0;
-	if (src == NULL || dst == NULL)
-		return (dst);
 	while (i < n)
 	{
 		tmp1[i] = tmp2[i];

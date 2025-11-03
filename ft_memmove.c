@@ -6,7 +6,7 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 23:59:53 by marvin            #+#    #+#             */
-/*   Updated: 2025/10/25 02:02:27 by matisgutier      ###   ########.fr       */
+/*   Updated: 2025/11/03 03:14:39 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char	*tmp_src;
 	size_t			i;
 
-	tmp_dst = (unsigned char *) dst;
-	tmp_src = (unsigned char *) src;
-	if (dst == NULL || src == NULL)
-		return (dst);
+	if (!dst && !src)
+		return (NULL);
+	tmp_dst = (unsigned char *)dst;
+	tmp_src = (unsigned char *)src;
 	if (tmp_dst > tmp_src)
 	{
 		i = len;
@@ -42,6 +42,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
+
 /*
 int	main(void)
 {

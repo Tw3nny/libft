@@ -6,7 +6,7 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 21:39:54 by marvin            #+#    #+#             */
-/*   Updated: 2025/10/28 03:28:01 by matisgutier      ###   ########.fr       */
+/*   Updated: 2025/11/03 03:24:05 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,16 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*last;
-	size_t	i;
+	const char	*last;
 
 	last = NULL;
-	i = 0;
-	while (s[i] != '\0')
+	while (*s)
 	{
-		if (s[i] == (char) c)
-			last = (char *) &s[i];
-		i++;
+		if (*s == (char) c)
+			last = s;
+		s++;
 	}
-	if (s[i] == (char) c)
-		last = (char *) &s[i];
-	return (last);
+	if ((char) c == '\0')
+		return ((char *)s);
+	return ((char *)last);
 }
