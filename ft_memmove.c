@@ -6,41 +6,34 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 23:59:53 by marvin            #+#    #+#             */
-/*   Updated: 2025/11/03 03:14:39 by matisgutier      ###   ########.fr       */
+/*   Updated: 2025/11/04 20:33:40 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include "libft.h"
 
-// 1ere boucle si dst est devant, 2eme boucle si src est devant
-// 1ere boucle on par de la fin, 2eme boucle on part du debut -> cpy classique
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char	*tmp_dst;
-	unsigned char	*tmp_src;
-	size_t			i;
+	size_t	i;
 
-	if (!dst && !src)
+	i = 0;
+	if (!dest && !src)
 		return (NULL);
-	tmp_dst = (unsigned char *)dst;
-	tmp_src = (unsigned char *)src;
-	if (tmp_dst > tmp_src)
+	if (dest > src)
 	{
-		i = len;
-		while (i-- > 0)
-			tmp_dst[i] = tmp_src[i];
+		while (n--)
+			*(unsigned char *)(dest + n) = *(unsigned char *)(src + n);
 	}
 	else
 	{
-		i = 0;
-		while (i < len)
+		while (i < n)
 		{
-			tmp_dst[i] = tmp_src[i];
+			*(unsigned char *)(dest + i) = *(unsigned char *)(src + i);
 			i++;
 		}
 	}
-	return (dst);
+	return (dest);
 }
 
 /*
