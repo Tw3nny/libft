@@ -6,34 +6,39 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 23:59:53 by marvin            #+#    #+#             */
-/*   Updated: 2025/11/04 20:33:40 by matisgutier      ###   ########.fr       */
+/*   Updated: 2025/11/05 00:34:41 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void    *ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
+    unsigned char    *tmp_dst;
+    unsigned char    *tmp_src;
+    size_t            i;
 
-	i = 0;
-	if (!dest && !src)
-		return (NULL);
-	if (dest > src)
-	{
-		while (n--)
-			*(unsigned char *)(dest + n) = *(unsigned char *)(src + n);
-	}
-	else
-	{
-		while (i < n)
-		{
-			*(unsigned char *)(dest + i) = *(unsigned char *)(src + i);
-			i++;
-		}
-	}
-	return (dest);
+    if (!dst && !src)
+        return (NULL);
+    tmp_dst = (unsigned char *)dst;
+    tmp_src = (unsigned char *)src;
+    if (tmp_dst > tmp_src)
+    {
+        i = len;
+        while (i-- > 0)
+            tmp_dst[i] = tmp_src[i];
+    }
+    else
+    {
+        i = 0;
+        while (i < len)
+        {
+            tmp_dst[i] = tmp_src[i];
+            i++;
+        }
+    }
+    return (dst);
 }
 
 /*
