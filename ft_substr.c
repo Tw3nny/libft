@@ -6,7 +6,7 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 03:04:47 by matisgutier       #+#    #+#             */
-/*   Updated: 2025/10/27 17:37:45 by matisgutier      ###   ########.fr       */
+/*   Updated: 2025/11/05 15:11:32 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,9 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
 	size_t	s_len;
 	char	*substr;
 
-	i = 0;
 	s_len = ft_strlen(s);
 	if (!s)
 		return (NULL);
@@ -32,12 +30,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr = malloc(sizeof(char) * (len + 1));
 	if (!substr)
 		return (NULL);
-	while (i < len)
-	{
-		substr[i] = s[start + i];
-		i++;
-	}
-	substr[i] = '\0';
+	ft_memcpy(substr, s + start, len);
+	substr[len] = '\0';
 	return (substr);
 }
 /*
