@@ -6,7 +6,7 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 02:57:54 by matisgutier       #+#    #+#             */
-/*   Updated: 2025/10/31 02:57:53 by matisgutier      ###   ########.fr       */
+/*   Updated: 2025/11/06 22:58:07 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 #include <stddef.h>
 #include <stdio.h>
 
+// return un tableau de mot sans les separateurs
+// compte le nb de mots 
 static int	count_word(char const *s, char c)
 {
 	size_t	i;
@@ -38,6 +40,7 @@ static int	count_word(char const *s, char c)
 	return (count);
 }
 
+// calcul la taille des mots  
 static int	word_len(char const *s, char c)
 {
 	size_t	i;
@@ -48,6 +51,7 @@ static int	word_len(char const *s, char c)
 	return (i);
 }
 
+// libere la memoire alloué en cas d'erreur
 static void	ft_free(char **s, size_t nb_words)
 {
 	size_t	i;
@@ -61,6 +65,7 @@ static void	ft_free(char **s, size_t nb_words)
 	free(s);
 }
 
+// rempli le tableau avec les mots donnés
 static char	**fill_word(char **result, char const *s, char c, size_t nb_words)
 {
 	size_t	len;

@@ -6,7 +6,7 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 17:50:34 by matisgutier       #+#    #+#             */
-/*   Updated: 2025/10/28 02:24:31 by matisgutier      ###   ########.fr       */
+/*   Updated: 2025/11/06 22:44:55 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+// alloue de la memoire et concatene 2 chaine dedans 
 char	*ft_strjoin(const char *s1, const char *s2)
 {
 	size_t	len_s1;

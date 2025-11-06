@@ -6,7 +6,7 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 03:04:47 by matisgutier       #+#    #+#             */
-/*   Updated: 2025/11/05 15:11:32 by matisgutier      ###   ########.fr       */
+/*   Updated: 2025/11/06 22:44:56 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <stdio.h>
 #include <stddef.h>
 
+// extrait la sous chaine a partir de start sur len char
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	s_len;

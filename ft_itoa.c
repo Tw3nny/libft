@@ -6,7 +6,7 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 03:59:17 by matisgutier       #+#    #+#             */
-/*   Updated: 2025/10/31 02:58:52 by matisgutier      ###   ########.fr       */
+/*   Updated: 2025/11/06 22:46:18 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <stddef.h>
 #include <stdio.h>
 
+// converti int vers char (inverse de atoi)
 static int	get_len(long n)
 {
 	size_t	len;

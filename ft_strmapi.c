@@ -6,7 +6,7 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 03:00:36 by matisgutier       #+#    #+#             */
-/*   Updated: 2025/10/31 03:33:10 by matisgutier      ###   ########.fr       */
+/*   Updated: 2025/11/06 22:47:44 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <stddef.h>
 #include <stdio.h>
 
+// applique la fonction f a chaque char d'une str -> return le resultat
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	int		i;

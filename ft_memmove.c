@@ -6,39 +6,40 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 23:59:53 by marvin            #+#    #+#             */
-/*   Updated: 2025/11/05 00:34:41 by matisgutier      ###   ########.fr       */
+/*   Updated: 2025/11/06 22:31:00 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include "libft.h"
 
-void    *ft_memmove(void *dst, const void *src, size_t len)
+// copie une zone memoire meme si chevauchement
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-    unsigned char    *tmp_dst;
-    unsigned char    *tmp_src;
-    size_t            i;
+	unsigned char	*tmp_dst;
+	unsigned char	*tmp_src;
+	size_t			i;
 
-    if (!dst && !src)
-        return (NULL);
-    tmp_dst = (unsigned char *)dst;
-    tmp_src = (unsigned char *)src;
-    if (tmp_dst > tmp_src)
-    {
-        i = len;
-        while (i-- > 0)
-            tmp_dst[i] = tmp_src[i];
-    }
-    else
-    {
-        i = 0;
-        while (i < len)
-        {
-            tmp_dst[i] = tmp_src[i];
-            i++;
-        }
-    }
-    return (dst);
+	if (!dst && !src)
+		return (NULL);
+	tmp_dst = (unsigned char *)dst;
+	tmp_src = (unsigned char *)src;
+	if (tmp_dst > tmp_src)
+	{
+		i = len;
+		while (i-- > 0)
+			tmp_dst[i] = tmp_src[i];
+	}
+	else
+	{
+		i = 0;
+		while (i < len)
+		{
+			tmp_dst[i] = tmp_src[i];
+			i++;
+		}
+	}
+	return (dst);
 }
 
 /*

@@ -6,7 +6,7 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 02:31:54 by matisgutier       #+#    #+#             */
-/*   Updated: 2025/10/28 03:30:30 by matisgutier      ###   ########.fr       */
+/*   Updated: 2025/11/06 22:44:53 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+// supprime les char(set) au debut et fin de la str(s1) 
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;

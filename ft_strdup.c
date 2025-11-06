@@ -6,24 +6,25 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 00:56:44 by matisgutier       #+#    #+#             */
-/*   Updated: 2025/10/27 02:59:39 by matisgutier      ###   ########.fr       */
+/*   Updated: 2025/11/06 22:39:53 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
+//alloue et copie une str
 char	*ft_strdup(const char *s1)
 {
 	size_t	size;
-	char	*tab;
+	char	*dup;
 
-	size = ft_strlen(s1);
-	tab = malloc(sizeof(char) * (size + 1));
-	if (!tab)
+	size = ft_strlen(s1) + 1;
+	dup = malloc(sizeof(char) * size);
+	if (!dup)
 		return (NULL);
-	ft_strlcpy(tab, s1, size + 1);
-	return (tab);
+	ft_memcpy(dup, s1, size);
+	return (dup);
 }
 /*
 int	main(void)
