@@ -6,7 +6,7 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 21:15:29 by marvin            #+#    #+#             */
-/*   Updated: 2025/11/06 22:32:57 by matisgutier      ###   ########.fr       */
+/*   Updated: 2025/11/09 23:47:12 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strchr(const char *s, int c)
 	}
 	if (s[i] == ((char) c))
 		return ((char *) &s[i]);
-	return (NULL);
+	return (0);
 }
 /*
 int	main(void)

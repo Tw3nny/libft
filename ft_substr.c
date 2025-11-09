@@ -6,7 +6,7 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 03:04:47 by matisgutier       #+#    #+#             */
-/*   Updated: 2025/11/06 22:44:56 by matisgutier      ###   ########.fr       */
+/*   Updated: 2025/11/07 11:52:52 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (start > s_len)
 		return (ft_strdup(""));
 	if (start + len > s_len)
-		len = s_len - (int) start;
+		len = s_len - start;
 	substr = malloc(sizeof(char) * (len + 1));
 	if (!substr)
 		return (NULL);
@@ -38,7 +38,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 /*
 int	main(void)
 {
-	char	*substr = ft_substr("ue ue sa dit quoi", 5, 7);
+	char	*substr = ft_substr("ue ue sa dit quoi", 5, 15);
 	printf("%s", substr);
 	free(substr);
 	return (0);

@@ -6,7 +6,7 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 22:23:09 by marvin            #+#    #+#             */
-/*   Updated: 2025/11/06 22:38:14 by matisgutier      ###   ########.fr       */
+/*   Updated: 2025/11/09 23:45:26 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		}
 		i++;
 	}
-	return (NULL);
+	return (0);
 }
 /* 
 int	main(void)
