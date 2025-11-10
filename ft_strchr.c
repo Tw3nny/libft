@@ -6,12 +6,13 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 21:15:29 by marvin            #+#    #+#             */
-/*   Updated: 2025/11/09 23:47:12 by matisgutier      ###   ########.fr       */
+/*   Updated: 2025/11/10 17:27:04 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include "libft.h"
+#include <stdio.h>
 
 // trouve la 1ere occurence d'un char dans une str -> return l'adresse
 char	*ft_strchr(const char *s, int c)

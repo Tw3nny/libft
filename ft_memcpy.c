@@ -6,12 +6,13 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 23:44:32 by marvin            #+#    #+#             */
-/*   Updated: 2025/11/06 22:31:02 by matisgutier      ###   ########.fr       */
+/*   Updated: 2025/11/10 17:28:25 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include "libft.h"
+#include <stdio.h>
 
 // copie une zone memoire vers une autre
 void	*ft_memcpy(void *dst, const void *src, size_t n)
@@ -20,10 +21,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	unsigned char	*tmp2;
 	size_t			i;
 
-	if (n == 0)
-		return (dst);
 	if (!dst && !src)
-		return (NULL);
+		return (dst);
 	tmp1 = (unsigned char *) dst;
 	tmp2 = (unsigned char *) src;
 	i = 0;

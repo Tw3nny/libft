@@ -6,14 +6,17 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 23:59:53 by marvin            #+#    #+#             */
-/*   Updated: 2025/11/06 22:31:00 by matisgutier      ###   ########.fr       */
+/*   Updated: 2025/11/10 17:10:48 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include "libft.h"
+#include <stdio.h>
 
 // copie une zone memoire meme si chevauchement
+// 1ere boucle = copie a l'envers si dst est apres src
+// 2eme boucle = si dst est avant src aucun pb on copie normalement
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char	*tmp_dst;

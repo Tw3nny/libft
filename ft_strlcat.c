@@ -6,12 +6,13 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 19:55:11 by marvin            #+#    #+#             */
-/*   Updated: 2025/11/06 22:31:59 by matisgutier      ###   ########.fr       */
+/*   Updated: 2025/11/10 17:26:31 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include "libft.h"
+#include <stdio.h>
 
 // concatene 2 str avec taille max + NULL
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
